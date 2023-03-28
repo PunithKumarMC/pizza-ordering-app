@@ -1,0 +1,34 @@
+
+<div class="container">
+<div>
+  <button mat-button type="button" color="primary" style="border: 2px solid black" class="button1" routerLink="">Previous page</button>
+<button mat-button type="button" color="primary" style="border: 2px solid black;margin-left: 1150px;" class="button1" (click)="viewcart()">View Cart</button>
+<button mat-button type="button" color="primary" style="border: 2px solid black;margin-left: 30px;" class="button1" (click)="logout()">log out</button>
+</div>
+
+<h2 class="header">Select the Pizza from the menu and add pizza to cart </h2>
+<div style="margin-left: 400px;">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>SI ID</th>
+          <th>Pizza Name</th>
+          <th>Regular Price</th>
+          <th>Medium Price</th>
+          <th>Large Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let note of pizzadata">
+          <td>{{note.pizzaid}}</td>
+          <td>{{note.pizzaname}}</td>
+          <td><input type="radio" name="n" > {{note.regularprice}}</td>
+          <td><input type="radio" name="n" >{{note.mediumprice}}</td> 
+          <td><input type="radio" name="n" >{{note.largeprice}}</td> 
+          <td><button (click)="addcart(note)">add to cart</button></td>
+        </tr>
+      </tbody>
+    </table>  
+  </div><br><br><br>
+
+</div>

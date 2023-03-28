@@ -1,0 +1,32 @@
+<div class="container">
+<h1 class="header">Please look into your orders before proceeding into payment....!</h1>
+<div>
+  <button mat-button type="button" color="primary" style="border: 2px solid black" class="button1" routerLink="/pizza-service">Previous page</button>
+<!-- <button mat-button type="button" color="primary" style="border: 2px solid black;margin-left: 1150px;" class="button1" (click)="viewcart()">View Cart</button> -->
+<button mat-button type="button" color="primary" style="border: 2px solid black;margin-left: 30px;" class="button1" (click)="logout()">log out</button>
+</div>
+<div style="margin-left: 250px;">
+    <table class="table">
+      <thead style="font-size: larger;">
+        <tr>
+          <th>pizzaid</th>
+          <th>Pizza Name</th>
+          <th>Pizza type</th>
+          <th>Pizza Price</th>
+        </tr>
+      </thead>
+      <tbody style="font-size: larger;">
+        <tr *ngFor="let item of cart">
+          <td>{{item.pizzaid}}</td>
+          <td>{{item.pizzaname}}</td>
+          <td>{{item.pizzatype}}</td>
+          <td>{{item.pizzaprice}}</td> 
+        </tr>
+      </tbody>
+    </table>
+   
+  </div>
+  <button mat-button type="button" color="primary" style="border: 2px solid black;margin-top: 100px;margin-left: 600px;" class="button1" >Pay</button>
+  <button mat-button type="button" color="primary" style="border: 2px solid black;margin-left: 30px;" class="button1" (click)="logout()">log out</button>
+
+</div>

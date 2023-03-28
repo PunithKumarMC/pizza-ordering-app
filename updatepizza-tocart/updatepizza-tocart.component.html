@@ -1,0 +1,33 @@
+
+<div style="background-color:  rgb(145, 144, 144); width: fit-content;justify-content: center;justify-items: center;align-items: center;align-content: center;margin-left: 450px;">
+    <h1 style="font-size: 50px; color: rgb(173, 30, 30);padding:50px;">Fill details to add to cart</h1>
+    
+    <!-- <h4 style="width: max-content;margin-left: 100px;">please enter your correct emailID for adding pizza to your cart</h4> -->
+        <!-- <input [(ngModel)]="email" type="email" id="email" name="email" required="true" style="width: max-content;margin-left: 100px;"><br><br> -->
+    <form [formGroup]="cartform" (ngSubmit)="addtocart(cartform)" style="width: max-content;margin-left: 100px;">
+        
+        <div>
+            <label for="pizzaid" class="barname">Enter SI NO</label>
+            <input type="text" id="pizzaid" name="pizzaid" class="form-control" formControlName="pizzaid" required>
+        </div><br><br>
+        <div>
+            <label for="pizzaname" class="barname">Enter pizza name</label>
+            <input type="text" id="pizzaname" name="pizzaname" class="form-control" formControlName="pizzaname" required="true">
+        </div><br><br>
+
+        <div>
+            <label for="pizzatype"  class="barname">Enter pizza type</label>
+            <input type="text" id="pizzatype" name="pizzatype" class="form-control" formControlName="pizzatype" required="true">
+        </div><br><br>
+        <div>
+            <label for="pizzaprice"  class="barname">Enter pizza price</label>
+            <input type="text" id="pizzaprice" name="pizzaprice" class="form-control" formControlName="pizzaprice" required="true">
+        </div><br><br>
+        
+        <div style="margin:30px;">
+            <button mat-button color="primary" style="border: 2px solid black;" >add to cart</button>
+            <button mat-button color="primary" style="border: 2px solid black;" routerLink="/pizza-service">Go back</button>
+        </div>
+    </form>
+</div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">

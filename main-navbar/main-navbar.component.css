@@ -1,0 +1,115 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-radius: 5px;
+ align-content: space-around;
+  color: rgb(0, 0, 0);
+  font-weight: 900px;
+  font-size: larger;
+ 
+}
+th, td {
+  padding: 15px;
+}
+
+.container{
+  background-color: rgb(133, 135, 135);
+  /* background-image: url(../images/3.jpg);  */
+  /* background: url(../images/3.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(0px);
+}
+
+.header{
+  text-align: center;color: rgb(255, 0, 17);font-size: xx-large;
+  text-decoration: wavy;
+  
+}
+
+
+
+.twelve h1 {
+  text-align: center; font-size:26px; font-weight:700;  letter-spacing:1px; text-transform:uppercase; width:160px; text-align:center; margin:auto; white-space:nowrap; padding-bottom:13px;
+}
+.twelve h1:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+.twelve h1:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+  position:absolute; right:0; bottom:0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+
+
+
+
+/* (A) CONTAINER */
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* (B) LAYERING */
+.back, .front {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.backB { z-index: 1; }
+.frontB { z-index: 2; }
+
+/* (C) BLURRED BACKGROUND IMAGE */
+.back {
+  background-color: rgb(157, 157, 157);
+  /* background: url(../images/3.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(10px);
+}
+
+/* (D) FRONT CONTENT */
+.front {
+  display: flex; text-align: center;
+  align-items: center; justify-content: center;
+}
+
+/* (X) DOES NOT MATTER */
+/* ENTIRE PAGE */
+* {
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
